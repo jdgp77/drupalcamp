@@ -1,0 +1,11 @@
+.login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    #root & .MuiInputBase-input {
+        margin-bottom: 0;
+    }
+}
+.login-section .MuiFormControl-root {
+    width: 100%;
+}

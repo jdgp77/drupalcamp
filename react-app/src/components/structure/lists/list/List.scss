@@ -1,0 +1,50 @@
+.structure-list {
+  &.width-fixed {
+    .content .row > a, .content .row > div {
+      display: inline-block;
+    }
+    .content .row > a {
+      cursor: pointer;
+      &:hover .item {
+        border-bottom: 5px solid #49dbdb;
+      }
+    }
+  }
+  .list {
+    &.width-300 > div {
+      width: 230px;
+      display: inline-block;
+    }
+    .item {
+      margin: 15px;
+      min-height: 100px;
+      box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.3);
+      border-bottom: 5px solid rgba(255,255,255,0.0);
+      transition: border-bottom 3s linear, box-shadow 3s linear;//ease-in-out
+      display: flex;
+      &.card {
+        display: block;
+        .image {
+          height: 100px;
+        }
+      }
+      h3 {
+        margin-top: 10px;
+        margin-bottom: 0px;
+      }
+      p {
+        margin-top: 7px;
+      }
+      &:hover {
+        box-shadow: 0px 2px 17px rgba(0, 0, 0, 0.3);
+      }
+    }
+      .image {
+        background: #EEE;
+        flex-basis: 120px;
+      }
+      .content {
+        padding: 10px 20px 10px 20px;
+      }
+  }
+}

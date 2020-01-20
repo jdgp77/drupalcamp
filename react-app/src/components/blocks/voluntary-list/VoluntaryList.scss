@@ -1,0 +1,33 @@
+#block-voluntary {
+  .content, h2 {
+    text-align: right;
+    max-width: 1000px;
+  }
+  .image {
+    img {
+      width: 100%;
+    }
+  }
+  .card-content {
+    height: 110px;
+    box-sizing: border-box;
+    width: 100%;
+    display: table;
+    padding: 0;
+    .card-title {
+      font-size: 15px;
+      text-align: center;
+      display: table-cell;
+      vertical-align: middle;
+      cursor: pointer;
+      padding: 5px 10px;
+      font-weight: 400;
+      &:hover {
+        background: #f6f9fd;
+      }
+    }
+  }
+  .list .content {
+    text-align: center;
+  }
+}

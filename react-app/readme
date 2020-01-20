@@ -1,0 +1,5 @@
+Para instalar react debe:
+1. Tener nodejs instalado, lo pueden descargar en https://nodejs.org
+2. Usar el comando "npm install -g create-react-app" (En algunos casos se necesita sudo al comienzo)
+3. Ejecutar el comando: "npm install"
+4. Para iniciar "npm start"

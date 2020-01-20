@@ -1,0 +1,76 @@
+h1.dc, h2.dc, h3.dc {
+  font-family: Montserrat, Arial;
+}
+h1.dc {
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 47px;
+  color: #222;
+}
+h2.dc  {
+  font-weight: 400;
+  font-size: 30px;
+  color: #333;
+}
+h3.dc {
+  font-weight: 400;
+  font-size: 24px;
+  color: #555;
+}
+.paragraph, p.dc {
+  font-family: sans-serif, Arial;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #777;
+}
+.line-bottom {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  &:after {
+    content: '';
+    right: 50%;
+    bottom: 0px;
+    margin-right: -50px;
+    display: block;
+    position: absolute;
+    background-color: #b7339c;
+    width: 100px;
+    height: 3px;
+  }
+  &.left {
+    &:after {
+      left: 0%;
+      margin-right: 0px;
+    }
+  }
+  &.right {
+    &:after {
+      right: 0%;
+      margin-right: 0px;
+    }
+  }
+}
+.btn {
+  background-color: #2bb;
+  padding: 6px 30px;
+  border-radius: 20px;
+  font-size: 16px;
+  height: 45px;
+  &:hover {
+    background-color: #3cc;
+  }
+}
+.dc.page-one-column {
+  .content-list {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.form-only {
+  clear: both;
+  padding: 50px 0;
+}

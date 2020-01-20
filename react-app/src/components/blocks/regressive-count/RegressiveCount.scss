@@ -1,0 +1,63 @@
+.timmer {
+  text-align: center;
+  h2 {
+    width: 100%;
+    display: block;
+    font-family: Dosis;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 40px;
+    display: block;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  p {
+    margin-top: 0px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 31px;
+  }
+  .countup {
+    display:flex;
+    flex-direction:row;
+    .container {
+      display: block;
+      flex:1 1 auto;
+      .timeel, .timeel-desc {
+        font-family: Dosis;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 23px;
+        width: 92px;
+        opacity: 0.67;
+        display: block;
+        text-align: center;
+      }
+      .timeel {
+
+      }
+      .separator {
+        display: block;
+        height: 7px;
+        width: 64px;
+        background: #FFFFFF;
+        opacity: 0.12;
+        border-radius: 18px;
+        margin: 0 auto;
+      }
+      .timeel-desc {
+
+      }
+    }
+  }
+  .btn {
+    margin-top: 25px;
+    display: inline-block;
+  }
+}

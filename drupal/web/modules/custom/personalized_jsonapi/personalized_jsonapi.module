@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * Implements hook_jsonapi_ENTITY_TYPE_filter_access() for 'menu_link_content'.
+ */
+function personalized_jsonapi_jsonapi_menu_link_content_filter_access() {
+    return ([
+      JSONAPI_FILTER_AMONG_ALL => AccessResult::allowed(),
+      JSONAPI_FILTER_AMONG_ENABLED => AccessResult::allowed(),
+    ]);
+  }

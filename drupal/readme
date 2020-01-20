@@ -1,0 +1,5 @@
+Para instalar drupal necesita:
+==============================
+1. Tener composer instalado.
+2. Ejecutar el comando: "composer install".
+3. Ya esta listo para instalar solo coloque la base de datos y el settings.

@@ -1,0 +1,155 @@
+$heightBanner: 566px;
+.section.banner {
+  width: 100%;
+  background-size: cover;
+  position: relative;
+  display: block;
+  padding-top: 1px;
+  background-repeat: repeat-x;
+  height: $heightBanner;
+  .background {
+    position: absolute;
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    height: 567px;
+    background-color: #F4F4F4;
+    .background-child {
+      min-width: 2135px;
+      position: absolute;
+      left: 50%;
+      margin-left: -1068px;
+    }
+      img {
+        height: $heightBanner;
+        display: block;
+        margin: 0 auto;
+        height: 567px;
+      }
+  }
+  .content {
+    height: $heightBanner;
+    position: absolute;
+    width: 100%;
+    > div {
+      margin: 170px auto;
+      max-width: 1000px;
+      padding: 0 40px;
+      @media (max-width: 700px) {
+        margin-top: 90px;
+      }
+    }
+    h1, .description {
+      text-align: right;
+      display: block;
+    }
+    h1 {
+      font-family: Montserrat;
+      font-style: normal;
+      color: #444;
+      text-align: center;
+      @media (max-width: 768px) {
+        font-size: 32px;
+      }
+    }
+    .description {
+      color: #555;
+      overflow: hidden;
+      display: block;
+      line-height: 31px;
+      font-size: 16px;
+      text-align: center;
+      p {
+        padding: 0;
+        margin: 0;
+        line-height: 31px;
+        font-size: 16px;
+      }
+    }
+    img {
+      width: 100%;
+      margin-top: 70px;
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+  }
+  &.banner-content {
+    height: 357px;
+    .background {
+      height: 357px;
+    }
+      .background-child {
+        bottom: -105px;
+      }
+    .content {
+      height: auto;
+      padding-top: 135px;
+      h1 {
+        text-align: center;
+        margin-bottom: 15px;
+        color: #b7339c;
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+      .description {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 800px;
+        padding: 0 20px;
+        height: 62px;
+      }
+    }
+  }
+  &.banner-search {
+    height: 357px;
+    .background {
+      height: 357px;
+    }
+    .content {
+      padding: 0 20px;
+      margin: 200px auto 0 auto;
+      width: 100%;
+      box-sizing: border-box;
+      input {
+        display: block;
+        max-width: 600px;
+        margin: auto;
+      }
+    }
+  }
+  .call-to-action {
+    text-align: center;
+    display: block;
+    .btn {
+      line-height: 36px;
+    }
+  }
+}
+.timmer {
+  color: #555;
+  position: absolute;
+  top: 200px;
+  right: 100px;
+  max-width: 437px;
+  padding: 0 20px;
+  @media (max-width: 1156px) {
+    right: 50px;
+  }
+  @media (max-width: 1156px) {
+    margin: 0 auto 73px auto;
+    position: static;
+    color: #000;
+  }
+  .countup .container.seconds {
+    @media (max-width: 425px) {
+      display: none;
+    }
+  }
+  > button.principal {
+    @media (max-width: 1156px) {
+      display: none;
+    }
+  }
+}

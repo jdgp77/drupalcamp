@@ -1,0 +1,5 @@
+name: Perzonalized JSON:API
+type: module
+description: 'Add perzonalized conficurations to JSON:API'
+package: Custom
+core: 8.x

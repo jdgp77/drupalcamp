@@ -1,0 +1,34 @@
+Pasos para arrancar con la pagina de DrupalCamp - Colombia:
+
+En Mac/Linux
+============
+
+Solo la primera vez
+-------------------
+1. Instalar Docker
+2. Ejecutar "sh script--start-docker.sh".
+3. Ejecutar "sh script--install.sh" (Espera un buen tiempo).
+4. Ejecutar "script--start.sh".
+
+Despues de esto estas seran las rutas de trabajo:
+- Drupal:
+localhost:10080
+- MySQL:
+localhost:13306
+- PHPMyAdmin:
+localhost:18080
+- React:
+localhost:13000
+
+Para las siguientes oportunidades
+---------------------------------
+Una vez ya esta instalado todo las siguientes oportunidades solo tienes que ejecutar
+1. Ejecutar "sh script--start-docker.sh"
+2. Ejecutar "sh script--start.sh".
+
+Conectarnos a la Base de datos
+==============================
+Si bien podemos conectarnos a la base de datos desde phpmyadmin, si se requiere conectar de forma externa se puede hacer al puerto 13306 con usuario: root y password: root
+
+
+
