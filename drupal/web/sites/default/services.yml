@@ -1,0 +1,9 @@
+parameters:
+  cors.config:
+    enabled: true
+    # Specify allowed headers, like 'x-allowed-header'.
+    allowedHeaders: ['Access-Control-Allow-Origin', 'Authorization', 'x-csrf-token', 'Content-Type', 'x-auth', 'limit', 'offset', 'order']
+    # Specify allowed request methods, specify ['*'] to allow all possible ones.
+    allowedMethods: ['POST', 'GET', 'OPTIONS', 'DELETE', 'PUT']
+    # Configure requests allowed from specific origins.
+    allowedOrigins: ['*']
