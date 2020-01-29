@@ -1,35 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5dba66c7ed2c9687c095e422c37f6019",
+    "revision": "a72b2b434308aa429783a8f0d8646207",
     "url": "/index.html"
   },
   {
-    "revision": "50303412c42bd8bdce1b",
+    "revision": "7dffed5465614da546b0",
     "url": "/static/css/2.a881067f.chunk.css"
   },
   {
-    "revision": "a77643de5850c1f5e2e1",
-    "url": "/static/css/main.37fa1271.chunk.css"
+    "revision": "7e319fa92fb82ef0c945",
+    "url": "/static/css/main.100a5e23.chunk.css"
   },
   {
-    "revision": "50303412c42bd8bdce1b",
-    "url": "/static/js/2.a2a36f7f.chunk.js"
+    "revision": "7dffed5465614da546b0",
+    "url": "/static/js/2.c799a06e.chunk.js"
   },
   {
-    "revision": "a77643de5850c1f5e2e1",
-    "url": "/static/js/main.73eba2d8.chunk.js"
+    "revision": "7e319fa92fb82ef0c945",
+    "url": "/static/js/main.bf1fc2a6.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
-  },
-  {
-    "revision": "dfdf43cad79ad3ec8863287b64d4f05c",
-    "url": "/static/media/AsociacionDrupalColombia.dfdf43ca.png"
-  },
-  {
-    "revision": "0b3000402f8b4009052e660018fab2db",
-    "url": "/static/media/AsociacionDrupalColombiaContraste.0b300040.png"
   },
   {
     "revision": "3a7dfce23c967cc1017cce6c8b7fa412",
@@ -42,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3c1fb8407add92865bf6dc8165e458fb",
     "url": "/static/media/Header2-2135.3c1fb840.png"
+  },
+  {
+    "revision": "2daed3bac8883a3b1953b4106fc86233",
+    "url": "/static/media/LogoAsociacionDrupalColombia-2-EnCurvas-svg.2daed3ba.svg"
   },
   {
     "revision": "56f32aa2f8290e13bf2707c6bbfedd2d",
