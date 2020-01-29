@@ -53,7 +53,7 @@ h3.dc {
     }
   }
 }
-.btn {
+body .btn {
   background-color: #2bb;
   padding: 6px 30px;
   border-radius: 20px;
@@ -61,6 +61,13 @@ h3.dc {
   height: 45px;
   &:hover {
     background-color: #3cc;
+  }
+  &.secondary {
+    background: transparent;
+    color: #2bb;
+    box-shadow: none;
+    border: 2px solid #2bb;
+    padding: 4px 28px;
   }
 }
 .dc.page-one-column {

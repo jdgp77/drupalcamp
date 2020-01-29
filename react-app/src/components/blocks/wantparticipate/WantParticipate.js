@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './WantParticipate.scss'
 import ImageWantParticipate from '../../../images/Participate/WantParticipate.png';
 import List from '../../structure/lists/list/List';
+import { Link } from 'react-router-dom';
 
 class WantParticipate extends Component {
   constructor() {
@@ -22,6 +23,7 @@ class WantParticipate extends Component {
               <h2 className="dc line-bottom left" >Quieres participar</h2>
               <div className="paragraph" >
                 <p>Escuchamos propuestas para quienes quieren participar.</p>
+                <Link to="/enviar-presentacion" className="waves-effect waves-light btn" >Quiero participar</Link>
               </div>
             </div>
           </div>

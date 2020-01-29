@@ -55,15 +55,15 @@ class List extends Component {
 				ourGlobalClass = 'width-fixed';
 				break;
 			default:
-				 ourClass = "list col s12 l" + (12/numCols);
+				ourClass = "list col s12 l" + (12/numCols);
 		}
 
 		let listItems = lists.map((item) => {
 			var getItemStructure = () => {
 				switch(type) {
-					case 'media':
+					case 'items':
 						return (<div className={ourClass}>
-								<div className="item media">
+								<div className="itemcard items">
 									<div className="image">
 			
 									</div>
@@ -73,10 +73,21 @@ class List extends Component {
 									</div>
 								</div>
 							</div>);
-						break;
+					case 'media':
+						return (<div className={ourClass}>
+								<div className="itemcard media">
+									<div className="image">
+			
+									</div>
+									<div className="content">
+										<h3 className="dc" >{ item.title }</h3>
+										<div className="paragraph" dangerouslySetInnerHTML={{__html: item.description }}></div>
+									</div>
+								</div>
+							</div>);
 					case 'card':
 						 return (<div className={ourClass}>
-							 <div className="item card">
+							 <div className="itemcard card">
 								 <div className="image">
 		 
 								 </div>
@@ -86,7 +97,6 @@ class List extends Component {
 								 </div>
 							 </div>
 						 </div>);
-						break;
 				}
 				
 			}

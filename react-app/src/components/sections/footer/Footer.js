@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './Footer.scss';
 import DrupalCampContraste from '../../../images/logos/DrupalCampContraste.png';
-import AsociacionDrupalColombiaContraste from '../../../images/logos/AsociacionDrupalColombiaContraste.png';
-import AsociacionDrupalColombia from '../../../images/logos/AsociacionDrupalColombia.png';
+import AsociacionDrupalColombiaContraste from '../../../images/logos/LogoAsociacionDrupalColombia-2-EnCurvas-svg.svg';
+//import AsociacionDrupalColombia from '../../../images/logos/AsociacionDrupalColombia.png';
 import { Link } from 'react-router-dom';
 
 class Footer extends Component {
@@ -56,6 +56,8 @@ class Footer extends Component {
               <ol>
                 <li><Link to="/nosotros">El evento</Link></li>
                 <li><Link to="/lugar">El lugar</Link></li>
+                <li><Link to="/keynote">Keynote</Link></li>
+                <li><Link to="/enviar-presentacion">Enviar Charla/taller</Link></li>
               </ol>
             </div>
             <div className="col s12 m3">
@@ -70,11 +72,10 @@ class Footer extends Component {
             <div className="col s12 m3">
               <div className="information">
               <br/>
-                <a href="https://asociaciondrupal.org/" ><img src={AsociacionDrupalColombia}  alt="Asociación Drupal Colombia"/></a>
+                Evento creado por:<br/>
+                <a href="https://asociaciondrupal.org/" target="_black" ><img className="logo-asociacion" src={AsociacionDrupalColombiaContraste}  alt="Asociación Drupal Colombia"/></a>
                 <br/>
-                <p className="footer-summary">
-                  Evento creado por<br/>Asociación Drupal Colombia.
-                </p>
+                <p className="footer-summary"></p>
               </div>
             </div>
           </div>

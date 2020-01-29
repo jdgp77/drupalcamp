@@ -1,0 +1,29 @@
+.FeaturedSpeaker {
+  > div {
+    max-width: 1000px;
+  }
+  h2 {
+    display: block;
+    text-align: center;
+  }
+  h3.sub-title {
+    text-align: center;
+  }
+  > p {
+    text-align: center;
+  }
+  .button-area
+  {
+    text-align: center;
+  }
+    a.btn {
+      display: inline-block;
+      margin: 0 auto;
+    }
+  .terminos {
+    display: block;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 25px;
+  }
+}

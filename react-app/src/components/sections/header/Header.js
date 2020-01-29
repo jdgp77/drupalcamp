@@ -57,22 +57,19 @@ class Header extends Component {
         instance.close();
       });
     }
-
     jGet({
-      url: '/jsonapi/menu_link_content/menu_link_content',
+      url: '/api/menu_items/main',
       withToken: true,
       then: (result) => {
         let linksMenu = [];
         let bnUpdateState = false;
-        for (let numData in result.data) {
-          let data = result.data[numData];
-          if (data.attributes.menu_name == 'main') {
-            linksMenu[linksMenu.length] = {
-              title: data.attributes.title,
-              link: (data.attributes.link && data.attributes.link.uri ? data.attributes.link.uri : '')
-            }
-            bnUpdateState = true;
+        for (let numData in result) {
+          let data = result[numData];
+          linksMenu[linksMenu.length] = {
+            title: data.title,
+            link: data.relative
           }
+          bnUpdateState = true;
         }
         if (bnUpdateState) {
           this.setState({
@@ -81,7 +78,7 @@ class Header extends Component {
         }
       },
       err: (result) => {
-
+        debugger;
       }
     });
   }
@@ -102,8 +99,8 @@ class Header extends Component {
         });
     }
  */  
-    return menu.map(function(item) {
-      return <li><Link to={item.link}>{item.title}</Link></li>
+    return menu.map(function(item, index) {
+      return <li key={index} ><Link to={item.link}>{item.title}</Link></li>
     });
   }
 
@@ -133,7 +130,7 @@ class Header extends Component {
 }
 
 Header.propTypes = {
-  login: PropTypes.string.isRequired,
+  login: PropTypes.bool.isRequired,
 };
 const mapStateToProps = state => ({ login: state.login });
 export default connect(mapStateToProps, null)(Header);

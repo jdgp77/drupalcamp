@@ -90,7 +90,7 @@
   }
   h3 {
     font-family: Dosis;
-    font-size: 31px;
+    font-size: 20px;
     display: block;
     .normal {
       font-weight: normal;
@@ -105,8 +105,13 @@
     display: block;
     margin-bottom: 50px;
   }
-  .block.voluntary {
-    background: #f6f9fd;
+  .block{
+    &.voluntary,
+    &.featured-speaker,
+    &.form-contact
+     {
+      background: #f6f9fd;
+    }
   }
   p {
     line-height: 26px;

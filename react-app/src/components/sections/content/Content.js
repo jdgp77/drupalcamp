@@ -8,6 +8,9 @@ import { getNodeTypeByUrl, filterTextFormat } from '../../../services/getcontent
 import WantParticipate from '../../blocks/wantparticipate/WantParticipate';
 import Filter from '../../blocks/filter/Filter';
 import TutorialList from '../../blocks/tutorial-list/TutorialList';
+import Alliances from '../../blocks/alliances/Alliances';
+import Sponsor from '../../blocks/sponsor/Sponsor';
+import FeaturedSpeaker from '../../blocks/featured-speaker/FeaturedSpeaker';
 
 class Content extends Component {
 
@@ -21,12 +24,17 @@ class Content extends Component {
 	}
 
 	updateDimensions = () => {
-		let images = document.querySelector('.page.content').querySelectorAll('img');
-		for (let countImage = 0; countImage < images.length; countImage++) {
-			let image = images[countImage];
-
-			if (image.offsetWidth > image.parentElement.offsetWidth) {
-				image.style.width="100%";
+		let images = document.querySelector('.page.content');
+		if (images) {
+			images = images.querySelectorAll('img');
+			if (images) {
+				for (let countImage = 0; countImage < images.length; countImage++) {
+					let image = images[countImage];
+		
+					if (image.offsetWidth > image.parentElement.offsetWidth) {
+						image.style.width="100%";
+					}
+				}
 			}
 		}
 	};
@@ -75,13 +83,20 @@ class Content extends Component {
 			case 'TutorialList':
 				return <TutorialList data={data} info={info} ></TutorialList>;
 				break;
+			case 'Alliances':
+				return <Alliances data={data} info={info} ></Alliances>;
+			case 'Sponsor':
+				return <Sponsor data={data} info={info} ></Sponsor>;
+			case 'FeaturedSpeaker':
+				return <FeaturedSpeaker data={data} info={info} ></FeaturedSpeaker>;
+				break;
 		}
 	}
 	
 	generateBlocks(arBlocks, info) {
 		let blocks = <div></div>;
 		if (arBlocks) {
-			blocks = arBlocks.map((comp) => {
+			blocks = arBlocks.map((comp, index) => {
 				let name = '';
 				let block = <div></div>;
 				if (comp.name)  {
@@ -111,7 +126,7 @@ class Content extends Component {
 				else {
 					block = this.createComponent(name);
 				}
-				return (<div className={info.generalClass}>{block}</div>);
+				return (<div key={index} className={info.generalClass}>{block}</div>);
 			});
 		}
 		return blocks;

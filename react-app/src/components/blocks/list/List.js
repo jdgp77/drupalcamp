@@ -49,7 +49,6 @@ class List extends Component {
 
   render () {
     const { data } = this.props;
-    console.log(this.state);
     let blocks = <div></div>;
 
     if (this.state[0]) {

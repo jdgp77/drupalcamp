@@ -8,6 +8,14 @@
       width: 100%;
     }
   }
+  a.btn {
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 8px;
+    &.secondary {
+      margin-left: 0px;
+    }
+  }
   .card-content {
     height: 110px;
     box-sizing: border-box;

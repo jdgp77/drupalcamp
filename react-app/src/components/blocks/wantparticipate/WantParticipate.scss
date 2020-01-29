@@ -4,7 +4,10 @@
   }
   .image {
     img {
-      width: 100%;
+      width: 70%;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      float: right;
     }
   }
   .card-content {

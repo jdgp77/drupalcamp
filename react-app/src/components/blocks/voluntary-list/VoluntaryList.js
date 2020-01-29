@@ -54,24 +54,10 @@ class VoluntaryList extends Component {
             <div className="col s12 l6">
               <h2 className="dc line-bottom right" >{this.state.title}</h2>
               <div className="paragraph" dangerouslySetInnerHTML={{__html: this.state.description }}></div>
-              <List numCols={1} data={[
-                {
-                  title: 'Danos tu opinión',
-                  description: '',
-                  link: {
-                    url: 'https://docs.google.com/forms/d/e/1FAIpQLSfyo9Hbx5PAM7NKxHQp4GGwArDZosLOXz4xqgzJzB1rKPcYUw/viewform',
-                    target: '_blank'
-                  }
-                },
-                {
-                  title: '¿Te contactamos?',
-                  description: '',
-                  link: {
-                    url: 'https://docs.google.com/forms/d/e/1FAIpQLSe-wFsnAJ1u2sGvGAZT2Cv4fD13m3Y115f_XXhZkPMVgiXzsA/viewform',
-                    target: '_blank'
-                  }
-                },
-              ]}></List>
+              <div>
+                <a className="waves-effect waves-light btn secondary" target="_black" href="https://docs.google.com/forms/d/e/1FAIpQLSe-wFsnAJ1u2sGvGAZT2Cv4fD13m3Y115f_XXhZkPMVgiXzsA/viewform" >¿Te contactamos?</a>
+                <a className="waves-effect waves-light btn" target="_black" href="https://docs.google.com/forms/d/e/1FAIpQLSfyo9Hbx5PAM7NKxHQp4GGwArDZosLOXz4xqgzJzB1rKPcYUw/viewform" >Danos tu opinión</a>
+              </div>
             </div>
             <div className="col s1"></div>
             <div className="col s12 l5 image">

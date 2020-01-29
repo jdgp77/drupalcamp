@@ -51,11 +51,11 @@ class Login extends Component {
           <div className="row">
             <div className="input-field col s12">
               <input id="first_name" value={this.state.user_or_email} onChange={this.handleChangeUserEmail} type="text" className="validate" />
-              <label for="first_name">Nombre de usuario / Correo</label>
+              <label htmlFor="first_name">Nombre de usuario / Correo</label>
             </div>
             <div className="input-field col s12">
               <input id="last_name" value={this.state.password} onChange={this.handleChangePassword} type="password" className="validate" />
-              <label for="last_name">Contraseña:</label>
+              <label htmlFor="last_name">Contraseña:</label>
             </div>
             <div className="button-area">
               <button className="waves-effect waves-light btn" onClick={this.createUser} >Enviar</button>

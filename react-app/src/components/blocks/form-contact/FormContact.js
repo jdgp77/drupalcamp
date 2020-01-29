@@ -19,7 +19,6 @@ class FormContact extends Component {
   }
 
   componentDidMount() {
-    debugger;
     jGet({
       url: '/jsonapi/webform/webform/cbd7a5b5-d113-48ee-86dc-55a38a5d4d2a?fields[webform--webform]=title,description',
       withToken: true,
@@ -85,11 +84,11 @@ class FormContact extends Component {
             <div className="row">
               <div className="input-field col s12 m6">
                 <input required id="name" type="text" className="validate" />
-                <label for="name">Nombre*</label>
+                <label htmlFor="name">Nombre*</label>
               </div>
               <div className="input-field col s12 m6">
                 <input required id="email" type="email" className="validate" />
-                <label for="email">Correo*</label>
+                <label htmlFor="email">Correo*</label>
               </div>
             </div>
             <div className="row">

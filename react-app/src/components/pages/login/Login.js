@@ -113,7 +113,7 @@ class Login extends Component {
             </div>
             <div className="input-field col s12">
             <FormControl>
-              <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
+              <InputLabel htmlhtmlFor="standard-adornment-password">Password</InputLabel>
               <Input
                 id="standard-adornment-password"
                 type={this.state.showPassword ? 'text' : 'password'}
