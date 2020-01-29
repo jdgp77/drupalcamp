@@ -47,7 +47,7 @@ class App extends Component {
           description: res.data.attributes.body.value
         });
       });
-      console.log('preproces', process.env.REACT_APP_URLBACK) // dev
+      console.log('preproces', process.env.REACT_APP_URLBACK); // dev
   }
 
   render () {

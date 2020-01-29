@@ -6,9 +6,9 @@ En Mac/Linux
 Solo la primera vez
 -------------------
 1. Instalar Docker
-2. Ejecutar "sh script--start-docker.sh".
-3. Ejecutar "sh script--install.sh" (Espera un buen tiempo).
-4. Ejecutar "script--start.sh".
+2. (En terminal 1) Ejecutar "sh script--start-docker.sh".
+3. (En terminal 2) Ejecutar "sh script--install.sh" (Espera un buen tiempo).
+4. (En terminal 2) Ejecutar "script--start.sh".
 
 Despues de esto estas seran las rutas de trabajo:
 - Drupal:
@@ -24,7 +24,7 @@ Para las siguientes oportunidades
 ---------------------------------
 Una vez ya esta instalado todo las siguientes oportunidades solo tienes que ejecutar
 1. Ejecutar "sh script--start-docker.sh"
-2. Ejecutar "sh script--start.sh".
+2. Tambien ejecutar "sh script--start.sh". (En paralelo)
 
 Conectarnos a la Base de datos
 ==============================
