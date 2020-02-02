@@ -779,12 +779,12 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 }
 $databases['default']['default'] = array (
   'database' => 'drupalcamp',
-  'username' => 'root',
-  'password' => 'root',
+  'username' => 'drupalcamp',
+  'password' => 'Vqxik&@3js877JeF_fdR',
   'prefix' => '',
   'host' => 'db',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$config_directories['sync'] = '../sync';
+$settings['config_sync_directory'] = 'sites/default/files/config_f7IG891pOBaXDNtBWW6zJ6N3t3LxvTrSvFWSuCqxnfYgt4acEHodMPRHJxxeyNIm4T3wRW9hxQ/sync';
