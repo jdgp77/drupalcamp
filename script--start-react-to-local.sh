@@ -1,4 +1,4 @@
 #!/bin/bash
 cd react-app
-sh script--start.sh
+sh script--start-local.sh
 cd ..
