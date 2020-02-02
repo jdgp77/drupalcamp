@@ -6,9 +6,15 @@ En Mac/Linux
 Solo la primera vez
 -------------------
 1. Instalar Docker
-2. (En terminal 1) Ejecutar "sh script--start-docker.sh".
-3. (En terminal 2) Ejecutar "sh script--install.sh" (Espera un buen tiempo).
-4. (En terminal 2) Ejecutar "script--start.sh".
+2. (Abres una terminal) Ejecutar "sh script--start-docker.sh".
+3. (Sin cerrar la terminal anterio abres una nueva y en ella) Ejecutar "sh script--install.sh" (Espera un buen tiempo).
+4. Cierras las dos terminales
+
+Para arrancar
+-------------
+Una vez ya esta instalado todo las siguientes oportunidades solo tienes que ejecutar en dos terminales
+1. (Terminal 1) Ejecutar "sh script--start-docker.sh"
+2. (Terminal 2) Tambien ejecutar "sh script--start.sh". (En paralelo)
 
 Despues de esto estas seran las rutas de trabajo:
 - Drupal:
@@ -19,12 +25,6 @@ localhost:13306
 localhost:18080
 - React:
 localhost:13000
-
-Para las siguientes oportunidades
----------------------------------
-Una vez ya esta instalado todo las siguientes oportunidades solo tienes que ejecutar
-1. Ejecutar "sh script--start-docker.sh"
-2. Tambien ejecutar "sh script--start.sh". (En paralelo)
 
 Conectarnos a la Base de datos
 ==============================
