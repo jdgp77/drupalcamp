@@ -24,6 +24,8 @@ import Lugar from './components/pages/lugar/Lugar';
 import InformacionConferencistas from './components/pages/InformacionConferencistas/InformacionConferencistas';
 import EnviarPresentacion from './components/pages/EnviarPresentacion/EnviarPresentacion';
 import CodigoConducta from './components/pages/CodigoConducta/CodigoConducta';
+import Agenda from './components/pages/agenda/Agenda';
+import Keynote from './components/pages/keynote/Keynote';
 
 const trackingId = "UA-1234567890-1"; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
@@ -68,7 +70,7 @@ class App extends Component {
               <Route exact path="/tutoriales/:id" component={Tutorial} />
               <Route exact path="/tutoriales" component={Tutorials} />
               <Route exact path="/iniciar-sesion" component={Login} />
-              <Route exact path="/nosotros" component={Nosotros} />
+              <Route exact path="/nosotros" component={Agenda} />
               <Route exact path="/lugar" component={Lugar} />
               <Route exact path="/politica-de-proteccion-de-datos" component={ProteccionDatos} />
               <Route exact path="/politica-de-tratamiento-de-datos-personales" component={TratamientoDatosPersonales} />
@@ -76,6 +78,8 @@ class App extends Component {
               <Route exact path="/codigo-conducta" component={CodigoConducta} />
               <Route exact path="/informacion-conferencistas" component={InformacionConferencistas} />
               <Route exact path="/busqueda" component={Search} />
+              <Route exact path="/agenda" component={Agenda} />
+              <Route exact path="/keynote" component={Keynote} />
               <Route exact path="/:paginabasica" component={PaginaBasica} />
             </Switch>
           </div>
