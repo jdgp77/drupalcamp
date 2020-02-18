@@ -65,6 +65,7 @@ class Header extends Component {
         let bnUpdateState = false;
         for (let numData in result) {
           let data = result[numData];
+          debugger;
           linksMenu[linksMenu.length] = {
             title: data.title,
             link: data.relative
