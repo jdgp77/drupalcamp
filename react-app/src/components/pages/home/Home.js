@@ -19,10 +19,11 @@ class Home extends Component {
   }
 
   render () {
+    // Falta: 'Sponsor', 'FeaturedSpeaker', 'Alliances',
     return (
       <div>
         <Banner type={"Home"} uuid={"ee093510-da58-4fe4-8b25-83c72444806d"} ></Banner>
-        <Content type={"one-column"} arBlocks={['WantParticipate', 'VoluntaryList', 'Sponsor', 'FeaturedSpeaker', 'Alliances', 'FormContact',]}></Content>
+        <Content type={"one-column"} arBlocks={['WantParticipate', 'VoluntaryList', 'FormContact',]}></Content>
       </div>
     );
   }

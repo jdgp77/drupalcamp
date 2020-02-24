@@ -15,23 +15,33 @@ class Header extends Component {
       menu: [
         {
           title: 'INICIO',
-          link: '/'
+          link: '/',
+          external: false,
+          description: ''
         },
         {
           title: 'ENVIAR CHARLA/TALLER',
-          link: '/enviar-presentacion'
+          link: '/enviar-presentacion',
+          external: false,
+          description: ''
         },
         {
           title: 'EVENTO',
-          link: '/nosotros'
+          link: '/nosotros',
+          external: false,
+          description: ''
         },
         {
           title: 'LUGAR',
-          link: '/lugar'
+          link: '/lugar',
+          external: false,
+          description: ''
         },
         {
           title: 'KEYNOTE',
-          link: '/keynote'
+          link: '/keynote',
+          external: false,
+          description: ''
         }
       ]
     }
@@ -67,7 +77,9 @@ class Header extends Component {
           let data = result[numData];
           linksMenu[linksMenu.length] = {
             title: data.title,
-            link: data.relative
+            link: data.relative,
+            external: data.external,
+            description: data.description
           }
           bnUpdateState = true;
         }
@@ -85,22 +97,18 @@ class Header extends Component {
 
   getLinks() {
     let menu = this.state.menu;
-/*
-    if (this.props.login) {
-      menu.push({
-          title: 'CERRAR SESIÓN',
-          link: '/iniciar-sesion'
-        });
-    }
-    else {
-      menu.push({
-          title: 'INICIAR SESIÓN',
-          link: '/iniciar-sesion'
-        });
-    }
- */  
+
     return menu.map(function(item, index) {
-      return <li key={index} ><Link to={item.link}>{item.title}</Link></li>
+      let myClassName = '';
+      if (item.description && item.description == 'principal') {
+        myClassName = 'principal';
+      }
+      if (item.external) {
+        return <li key={index} ><a className={myClassName} href={item.link}>{item.title}</a></li>
+      }
+      else {
+        return <li key={index} ><Link to={item.link}>{item.title}</Link></li>
+      }
     });
   }
 

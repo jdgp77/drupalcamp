@@ -60,7 +60,7 @@
           vertical-align: middle;
           padding: 0px 30px;
           margin: 0;
-          width: 180px;
+          max-width: 180px;
           text-align: center;
           font-size: 12px;
           font-weight: bold;
@@ -85,6 +85,23 @@
               content: '';
               position: absolute;
               display: block;
+            }
+          }
+          &.principal {
+            background-color: #3cc;
+            border-radius: 20px;
+            max-width: 140px;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: white;
+            &:hover {
+              background-color: #5DD;
+            }
+            &:after {
+              display: none;
+            }
+            &:before {
+              display: none;
             }
           }
         }
