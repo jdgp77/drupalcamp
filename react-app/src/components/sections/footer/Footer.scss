@@ -16,6 +16,18 @@
         text-align: left;
       }
     }
+
+
+    .footer-redes {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      
+      li{
+        margin-left: 10px;
+      }
+    }
+    
     .information {
       max-width: 430px;
       margin: 0 auto;
