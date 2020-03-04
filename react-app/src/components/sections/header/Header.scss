@@ -7,10 +7,10 @@
     margin: 0;
     img {
       margin-left: 150px;
-      transition: all .3s ease-out;
+      transition: all 0.3s ease-out;
       margin-top: -35px;
       display: block;
-      transform: translate(0,13px) scale(0.6, 0.6);
+      transform: translate(0, 13px) scale(0.6, 0.6);
       @media (max-width: 768px) {
         margin-left: 0px;
       }
@@ -36,10 +36,10 @@
     display: block;
     background-color: transparent;
     height: 115px;
-    background-color: rgba(255,255,255,0.95);
-    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
     body.on-top & {
-      box-shadow: 0px 2px 5px rgba(0,0,0,0);
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0);
       background-color: transparent;
     }
     .sidenav-trigger {
@@ -50,8 +50,8 @@
       padding: 0;
       margin: 12px 0 0 0;
       li {
-        float: left;
-        display: table;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 80px;
@@ -73,16 +73,17 @@
           &:hover {
             background-color: transparent;
             &:after {
-              content: '';
+              content: "";
               position: absolute;
               display: block;
               border-bottom: 3px solid #64dcdb;
+              
               width: 90%;
               bottom: 0px;
               left: 5%;
             }
             &:before {
-              content: '';
+              content: "";
               position: absolute;
               display: block;
             }
@@ -95,7 +96,7 @@
             margin-right: 20px;
             color: white;
             &:hover {
-              background-color: #5DD;
+              background-color: #5dd;
             }
             &:after {
               display: none;
@@ -105,7 +106,33 @@
             }
           }
         }
+
+        &:hover{
+          ul{
+            opacity: 1;
+            top: 80px;
+            display: block;
+          }
+        }
+        ul{
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: -185px;
+          align-items: center;
+          justify-content: center;
+          background: #e6e5e5;
+          width: 10vw;
+          margin-left: 0px;
+          opacity: 0;
+
+          li{
+            width: 100%;
+          }
+
+        }
       }
     }
+
   }
 }

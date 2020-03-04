@@ -163,11 +163,9 @@ class Footer extends Component {
         /* result.forEach(element => {
           console.log(element.title);
         }); */
-        console.log (result);
-        for(let i = 0; i < result.length; i++) {
-          console.log(result[i].title);
-        } 
-        this.setState(result);
+        console.log ("main",result);
+       
+        this.setState({...this.state, ...{menu: result} });
         //this.setState({ tituloGeneral : 'casa' });
 
       },
@@ -177,11 +175,18 @@ class Footer extends Component {
     });
 
     jGet({
-      url:'api/menu_items/about-us',
+      url:'/api/menu_items/about-us',
       withToken: true,
       then: (result) => {
-        this.setState(result);
+        console.log("them", result);
+        this.setState({...this.state, ...{menu2: result} });
+        
       },
+      err: (result) => {
+        console.log("error", result);
+        debugger;
+        
+      }
     });
   }
 

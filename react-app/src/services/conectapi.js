@@ -29,6 +29,21 @@ const jGet = info => {
     jGetToken();
   }
 
+  fetch(`${url_base}${info.url}`, {
+    headers: new Headers({
+
+    })
+  })
+  .then(function(result) {
+    return result.json();
+  })
+  .then(function(result) {
+    console.log("fetch",info.url,result);
+    info.then(result)
+  }).catch(function(err){
+    info.err(err)
+  });
+  /*
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState === 4) {
@@ -52,7 +67,7 @@ const jGet = info => {
     info.err(err);
     logger.error(err);
   }
-
+*/
 }
 
 //  Carga el token, debe ser usada antes de cualquier POST
