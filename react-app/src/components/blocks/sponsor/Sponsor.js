@@ -42,10 +42,11 @@ class Sponsor extends Component {
           <h2 className="dc line-bottom">{title}</h2>
           <span className="subtitle paragraph" dangerouslySetInnerHTML={{__html: description }}></span>
           <h3 className="dc sub-title" >DIAMANTE</h3>
-          <List type={"items"} numCols={4} data={[
+          <List type={"items"} numCols={3} data={[
             {
               title: '',
               description: '',
+              image: '/images/sponsors/Acquia.png',
               link: {
                 url: 'https://reactlaconf.co/',
                 target: '_blank'
@@ -54,6 +55,7 @@ class Sponsor extends Component {
             {
               title: '',
               description: '',
+              image: '/images/sponsors/BitsAmericas.png',
               link: {
                 url: 'https://drupaliz.me',
                 target: '_blank'
@@ -62,36 +64,14 @@ class Sponsor extends Component {
             {
               title: '',
               description: '',
-              link: {
-                url: 'https://drupaliz.me',
-                target: '_blank'
-              },
-            },
-            {
-              title: '',
-              description: '',
-              link: {
-                url: 'https://drupaliz.me',
-                target: '_blank'
-              },
-            },
-            {
-              title: '',
-              description: '',
-              link: {
-                url: 'https://drupaliz.me',
-                target: '_blank'
-              },
-            },
-            {
-              title: '',
-              description: '',
+              image: '/images/sponsors/Seed.png',
               link: {
                 url: 'https://drupaliz.me',
                 target: '_blank'
               },
             },
           ]}></List>
+          {/*
           <h3 className="dc sub-title" >ORO</h3>
           <List type={"items"} numCols={4} data={[
             {
@@ -194,6 +174,7 @@ class Sponsor extends Component {
               },
             },
           ]}></List>
+          */}
         </div>
       </div>
     );

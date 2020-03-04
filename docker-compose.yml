@@ -30,7 +30,7 @@ services:
     ports:
      - "18080:80"
   react:
-    image: jdgp77/react-app
+    image: node:10.19.0-jessie
     working_dir: /app
     volumes:
       - ./react-app:/app
