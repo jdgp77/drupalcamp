@@ -160,10 +160,6 @@ class Footer extends Component {
       url: '/api/menu_items/main',
       withToken: true,
       then: (result) => {
-        /* result.forEach(element => {
-          console.log(element.title);
-        }); */
-        console.log ("main",result);
        
         this.setState({...this.state, ...{menu: result} });
         //this.setState({ tituloGeneral : 'casa' });
@@ -178,12 +174,10 @@ class Footer extends Component {
       url:'/api/menu_items/about-us',
       withToken: true,
       then: (result) => {
-        console.log("them", result);
         this.setState({...this.state, ...{menu2: result} });
         
       },
       err: (result) => {
-        console.log("error", result);
         debugger;
         
       }
@@ -235,23 +229,6 @@ class Footer extends Component {
                 {/*<li><Link to="/personas">Mapa de conocimiento</Link></li> */}
               </ol>
             </div>
-{/* 
-            <div>{this.state[6].ejemplo[1].nombre}</div>
-            <h2>{this.state[6].ejemplo.map((item)=>
-              <div>{item.apellido}</div>
-
-            )}</h2> 
-
-
-          <div>
-            {this.state[6].ejemplo.map((cosa) =>
-              <div>{cosa.nombre}</div>
-            )}
-          </div> */}
-
-            
-
-
 
             <div className="col s12 m3">
               <div className="information">
