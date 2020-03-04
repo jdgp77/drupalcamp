@@ -48,7 +48,7 @@ class Sponsor extends Component {
               description: '',
               image: '/images/sponsors/Acquia.png',
               link: {
-                url: 'https://reactlaconf.co/',
+                url: 'https://www.acquia.com/',
                 target: '_blank'
               },
             },
@@ -57,7 +57,7 @@ class Sponsor extends Component {
               description: '',
               image: '/images/sponsors/BitsAmericas.png',
               link: {
-                url: 'https://drupaliz.me',
+                url: 'https://www.bitsamericas.com/',
                 target: '_blank'
               },
             },
@@ -66,7 +66,7 @@ class Sponsor extends Component {
               description: '',
               image: '/images/sponsors/Seed.png',
               link: {
-                url: 'https://drupaliz.me',
+                url: 'https://www.seedem.co/',
                 target: '_blank'
               },
             },
