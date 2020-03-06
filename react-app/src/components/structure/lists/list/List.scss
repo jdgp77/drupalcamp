@@ -22,9 +22,13 @@
         display: block;
         width: 150px;
         height: 150px;
-        background-color: grey;
-        border-radius: 200px;
         margin: 0 auto;
+        background-color: transparent;
+        img {
+          height: 150px;
+          width: 150px;
+          background-size: cover;
+        }
       }
       .content {
         padding-top: 2px;

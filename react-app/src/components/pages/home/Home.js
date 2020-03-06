@@ -23,7 +23,7 @@ class Home extends Component {
     return (
       <div>
         <Banner type={"Home"} uuid={"ee093510-da58-4fe4-8b25-83c72444806d"} ></Banner>
-        <Content type={"one-column"} arBlocks={['WantParticipate', 'VoluntaryList', 'FormContact',]}></Content>
+        <Content type={"one-column"} arBlocks={['WantParticipate', 'VoluntaryList', 'Sponsor', 'FormContact',]}></Content>
       </div>
     );
   }

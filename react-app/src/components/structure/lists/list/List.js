@@ -65,7 +65,7 @@ class List extends Component {
 						return (<div className={ourClass}>
 								<div className="itemcard items">
 									<div className="image">
-			
+										<img src={item.image ? item.image : ''} />
 									</div>
 									<div className="content">
 										<h3 className="dc" >{ item.title }</h3>
