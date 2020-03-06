@@ -55,6 +55,7 @@
         justify-content: center;
         align-items: center;
         height: 80px;
+        position: relative;
         a {
           display: table-cell;
           vertical-align: middle;
@@ -110,8 +111,9 @@
         &:hover{
           ul{
             opacity: 1;
-            top: 80px;
+            top: 68px;
             display: block;
+            left: -18px;
           }
         }
         ul{
@@ -132,6 +134,9 @@
 
         }
       }
+    }
+    div > ul > li {
+      display: table;
     }
 
   }

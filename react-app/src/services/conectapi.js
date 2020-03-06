@@ -38,7 +38,6 @@ const jGet = info => {
     return result.json();
   })
   .then(function(result) {
-    console.log("fetch",info.url,result);
     info.then(result)
   }).catch(function(err){
     info.err(err)
