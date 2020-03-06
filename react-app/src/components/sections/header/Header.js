@@ -372,7 +372,7 @@ class Header extends Component {
         instance.close();
       });
     }
-    /*jGet({
+    jGet({
       url: "/api/menu_items/main",
       withToken: true,
       then: result => {
@@ -384,7 +384,7 @@ class Header extends Component {
       err: result => {
         debugger;
       }
-    });*/
+    });
   }
 
   getLinks = (menu) => {
