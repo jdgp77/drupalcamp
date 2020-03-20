@@ -386,33 +386,37 @@ class Header extends Component {
       }
     });
   }
-
+  
   getLinks = (menu) => {
+    return menu.map((item, index) => {
+      let myClassName = "";
+      if (item.description && item.description == "principal") {
+        myClassName = "principal";
+      }
+      if (item.external) {
+        return (
+          <li key={index}>
+            <a className={myClassName} href={item.relative}>
+              {item.title}
+            </a>
+            { item.below ? this.getLinksUl(item.below) : ''}
+          </li>
+        );
+      } else {
+        return (
+          <li key={index} >
+            <Link to={item.relative}>{item.title}</Link>
+            { item.below ? this.getLinksUl(item.below) : ''}
+          </li>
+        );
+      }
+    })
+  }
+
+  getLinksUl = (menu) => {
     return (
       <ul id="nav-mobile" className="right hide-on-med-and-down">
-        {menu.map((item, index) => {
-          let myClassName = "";
-          if (item.description && item.description == "principal") {
-            myClassName = "principal";
-          }
-          if (item.external) {
-            return (
-              <li key={index}>
-                <a className={myClassName} href={item.relative}>
-                  {item.title}
-                </a>
-                { item.below ? this.getLinks(item.below) : ''}
-              </li>
-            );
-          } else {
-            return (
-              <li key={index} >
-                <Link to={item.relative}>{item.title}</Link>
-                { item.below ? this.getLinks(item.below) : ''}
-              </li>
-            );
-          }
-        })}
+        {this.getLinks(menu)}
       </ul>
     );
   }
@@ -433,7 +437,7 @@ class Header extends Component {
               <i className="material-icons">menu</i>
             </a>
 
-            {this.getLinks(this.state.menu)}
+            {this.getLinksUl(this.state.menu)}
           </div>
         </nav>
         <ul className="sidenav" id="mobile-demo">

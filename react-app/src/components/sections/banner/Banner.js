@@ -4,6 +4,7 @@ import DrupalCamp from '../../../images/logos/DrupalCamp.png';
 import './Banner.scss';
 import jGet from '../../../services/conectapi';
 import { getNodByUuid, getNodeTypeByUrl } from '../../../services/getcontent';
+import { Link } from 'react-router-dom';
 
 class Banner extends Component {
 
@@ -81,8 +82,8 @@ class Banner extends Component {
                   <h1 className="dc" >{ title }</h1>
                   <p className="description dc" dangerouslySetInnerHTML={{__html: description }}></p>
                   <span className="call-to-action">
-                  <a className="waves-effect waves-light btn mr-20" target="_black" href="https://www.ticketopolis.com/drupalcolombia/" >Comprar entrada</a>
-                    <a className="waves-effect waves-light btn secondary" href="#recibe-informacion" >Informate</a>
+                    <Link className="waves-effect waves-light btn mr-20" target="_black" to="/comunicado-sobre-el-covid-19" >Comunicado sobre COVIT-19</Link>
+                    {/* <a className="waves-effect waves-light btn secondary" href="#recibe-informacion" >Informate</a> */}
                   </span>
                 </div>
                 <div className="col s1"></div>
@@ -134,7 +135,7 @@ class Banner extends Component {
             </div>
           </div>
           <div className="content" >
-            <h1 className="dc" >{ title }</h1>
+            <h2 className="dc" >{ title }</h2>
             <p  className="dc description" dangerouslySetInnerHTML={{__html: summary }}></p>
           </div>
         </div>
