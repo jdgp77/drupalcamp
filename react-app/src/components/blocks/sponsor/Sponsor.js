@@ -37,7 +37,7 @@ class Sponsor extends Component {
     var description = this.state.description;
 
     return (
-      <div className="block sponsor" id="recibe-informacion" >
+      <div className="block sponsor" id="sponsor" >
         <div>
           <h2 className="dc line-bottom">{title}</h2>
           <span className="subtitle paragraph" dangerouslySetInnerHTML={{__html: description }}></span>

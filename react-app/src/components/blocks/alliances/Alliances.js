@@ -37,7 +37,7 @@ class Alliances extends Component {
     var description = this.state.description;
 
     return (
-      <div className="block alliances" id="recibe-informacion" >
+      <div className="block alliances" id="alliances" >
         <div>
           <h2 className="dc line-bottom">{title}</h2>
           <span className="subtitle paragraph" dangerouslySetInnerHTML={{__html: description }}></span>

@@ -212,7 +212,7 @@ class Footer extends Component {
                 <img src={DrupalCampContraste}  alt="Asociación Drupal Colombia"/>
                 <br/>
                 <p className="footer-summary">
-                  DrupalCamp 2020 <br/> Medellín, Colombia
+                  DrupalCamp Virtual<br/> Colombia 2020
                 </p>
               </div>
             </div>
