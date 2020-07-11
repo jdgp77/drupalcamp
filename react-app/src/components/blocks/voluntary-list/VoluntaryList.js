@@ -55,8 +55,8 @@ class VoluntaryList extends Component {
               <h2 className="dc line-bottom right" >{this.state.title}</h2>
               <div className="paragraph" dangerouslySetInnerHTML={{__html: this.state.description }}></div>
               <div>
-                <a className="waves-effect waves-light btn secondary" target="_black" href="https://docs.google.com/forms/d/e/1FAIpQLSe-wFsnAJ1u2sGvGAZT2Cv4fD13m3Y115f_XXhZkPMVgiXzsA/viewform" >¿Te contactamos?</a>
-                <a className="waves-effect waves-light btn" target="_black" href="https://docs.google.com/forms/d/e/1FAIpQLSfyo9Hbx5PAM7NKxHQp4GGwArDZosLOXz4xqgzJzB1rKPcYUw/viewform" >Danos tu opinión</a>
+                {/*<a className="waves-effect waves-light btn secondary" target="_black" href="https://docs.google.com/forms/d/e/1FAIpQLSe-wFsnAJ1u2sGvGAZT2Cv4fD13m3Y115f_XXhZkPMVgiXzsA/viewform" >¿Te contactamos?</a>*/}
+                <a className="waves-effect waves-light btn" target="_black" href="https://docs.google.com/forms/d/e/1FAIpQLSf-KSI6Y5XmF1kjWC6cV7l4WholHA5TLv7LawG8C3Vh6nW3lw/viewform" >Danos tu opinión</a>
               </div>
             </div>
             <div className="col s1"></div>

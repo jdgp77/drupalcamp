@@ -82,7 +82,7 @@ class Banner extends Component {
                   <h1 className="dc" >{ title }</h1>
                   <p className="description dc" dangerouslySetInnerHTML={{__html: description }}></p>
                   <span className="call-to-action">
-                    <Link className="waves-effect waves-light btn mr-20" target="_black" to="/comunicado-sobre-el-covid-19" >Comunicado sobre COVIT-19</Link>
+                    <a className="waves-effect waves-light btn mr-20" target="_black" href="#recibe-informacion" >Inscribete aquí</a>
                     {/* <a className="waves-effect waves-light btn secondary" href="#recibe-informacion" >Informate</a> */}
                   </span>
                 </div>
