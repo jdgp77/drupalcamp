@@ -8,7 +8,7 @@ class FormContact extends Component {
   constructor() {
     super();
     this.state = {
-      title: 'Recibe Información-',
+      title: 'Recibe Información',
       description: 'Al registrarte en el evento podrás recibir información.'
     };
 

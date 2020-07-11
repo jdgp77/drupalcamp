@@ -778,11 +778,11 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 $databases['default']['default'] = array (
-  'database' => 'drupalcamp',
-  'username' => 'drupalcamp',
+  'database' => 'educaci2_drupalcamp',
+  'username' => 'educaci2_drupalc',
   'password' => 'Vqxik&@3js877JeF_fdR',
   'prefix' => '',
-  'host' => 'db',
+  'host' => 'localhost',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
