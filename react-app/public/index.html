@@ -97,7 +97,7 @@
       var _starCountRef = fireDatabase.ref('message');
       _starCountRef.on('value', function(snapshot) {
         let messageData = snapshot.val(); 
-        if (snapshot.val() != '') {
+        if (messageData.html != '') {
           M.toast(messageData);
         }
       });
