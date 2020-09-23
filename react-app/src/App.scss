@@ -76,7 +76,34 @@ body .btn {
     margin: 0 auto;
   }
 }
+body strong {
+  font-weight: bold;
+}
 
+body strong {
+  font-weight: bold;
+}
+.red-message {
+  background-color: rgba(150, 0, 0, 0.95);
+  color: white;
+  font-weight: 500;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: block !important;
+  a, span, span.strong {
+    display: inline !important;
+    color: white;
+    font-weight: bold;
+  }
+  a {
+    text-decoration: underline;
+  }
+  span.strong {
+    font-weight: bold;
+    color: white;
+    display: inline;
+  }
+}
 .form-only {
   clear: both;
   padding: 50px 0;

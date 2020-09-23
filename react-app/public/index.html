@@ -82,6 +82,25 @@
           window.localStorage.setItem('youtube_talleresId', snapshot.val());
         }
       });
+      var _starCountRef = fireDatabase.ref('live/zcountdown/talleres');
+      _starCountRef.on('value', function(snapshot) {
+        if (window.localStorage) {
+          window.localStorage.setItem('countdown_talleres', snapshot.val());
+        }
+      });
+      var _starCountRef = fireDatabase.ref('live/zcountdown/conferencias');
+      _starCountRef.on('value', function(snapshot) {
+        if (window.localStorage) {
+          window.localStorage.setItem('countdown_conferencias', snapshot.val());
+        }
+      });
+      var _starCountRef = fireDatabase.ref('message');
+      _starCountRef.on('value', function(snapshot) {
+        let messageData = snapshot.val(); 
+        if (snapshot.val() != '') {
+          M.toast(messageData);
+        }
+      });
 
     </script>
     
