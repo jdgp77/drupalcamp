@@ -103,17 +103,27 @@ class List extends Component {
 
 			if (item.link) {
 				if (item.link.url) {
-					if (!item.link.target) {
-						item.link.target = '';
+					if (typeof item.link.url == 'string' && item.link.url != '') {
+						if (!item.link.target) {
+							item.link.target = '';
+						}
+						return <a target={item.link.target} href={item.link.url} >
+							{ getItemStructure() }
+						</a>
 					}
-					return <a target={item.link.target} href={item.link.url} >
-						{ getItemStructure() }
-					</a>
+					else {
+						return getItemStructure();
+					}
 				}
 				else {
-					return <a href={item.link} >
-						{ getItemStructure() }
-					</a>
+					if (typeof item.link == 'string' && item.link != '') {
+						return <a href={item.link} >
+							{ getItemStructure() }
+						</a>
+					}
+					else {
+						return getItemStructure();
+					}
 				}
 			}
 			else {

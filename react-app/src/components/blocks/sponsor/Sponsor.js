@@ -10,26 +10,51 @@ class Sponsor extends Component {
     super();
     this.state = {
       title: 'Nuestros Patrocinadores',
-      description: ''
+      description: '',
+      diamont: [],
+      gold: [],
+      silver: [],
     };
   }
 
   componentDidMount() {
-    /*
     jGet({
-      url: '/jsonapi/webform/webform/cbd7a5b5-d113-48ee-86dc-55a38a5d4d2a?fields[webform--webform]=title,description',
+      url: '/ourapi/sponsorship?_format=json',
       withToken: true,
       then: (result) => {
+        let newData = [];
+        for (let i in result) {
+          let data = result[i];
+          //data.title[0].value
+          let imageUrl = data.field_image[0].url;
+          let link = (data.field_link[0] ? data.field_link[0].uri : '');
+          let sponsorship = data.field_sponsorship_type[0].target_id;
+          if (newData[sponsorship] === undefined) {
+            newData[sponsorship] = [];
+          }
+          newData[sponsorship][newData[sponsorship].length] = {
+            title: '',
+            description: '',
+            image: imageUrl,
+            link: {
+              url: link,
+              target: '_blank'
+            },
+          };
+        }
+        console.log('newData', newData);
         this.setState({
-          title: result.data.attributes.title,
-          description: result.data.attributes.description
+          ...this.state, ...{
+            diamont: newData[5],
+            gold: newData[6],
+            silver: newData[7]
+          }
         });
       },
       err: (result) => {
 
       }
     });
-    */
   }
 
   render () {
@@ -41,92 +66,9 @@ class Sponsor extends Component {
         <div>
           <h2 className="dc line-bottom">{title}</h2>
           <span className="subtitle paragraph" dangerouslySetInnerHTML={{__html: description }}></span>
-          <h3 className="dc sub-title" >DIAMANTE</h3>
-          <List type={"items"} numCols={2} data={[
-            {
-              title: '',
-              description: '',
-              image: '/images/sponsors/BitsAmericas.png',
-              link: {
-                url: 'https://www.bitsamericas.com/',
-                target: '_blank'
-              },
-            },
-            {
-              title: '',
-              description: '',
-              image: '/images/sponsors/Seed.png',
-              link: {
-                url: 'https://www.seedem.co/',
-                target: '_blank'
-              },
-            },
-          ]}></List>
-          <h3 className="dc sub-title" >ORO</h3>
-          <List type={"items"} numCols={1} data={[
-            {
-              title: '',
-              description: '',
-              image: '/images/sponsors/Acquia.png',
-              link: {
-                url: 'https://www.acquia.com/',
-                target: '_blank'
-              },
-            }
-          ]}></List>
-          {/*
-          <h3 className="dc sub-title" >PLATA</h3>
-          <List type={"items"} numCols={4} data={[
-            {
-              title: '',
-              description: '',
-              link: {
-                url: 'https://reactlaconf.co/',
-                target: '_blank'
-              },
-            },
-            {
-              title: '',
-              description: '',
-              link: {
-                url: 'https://drupaliz.me',
-                target: '_blank'
-              },
-            },
-            {
-              title: '',
-              description: '',
-              link: {
-                url: 'https://drupaliz.me',
-                target: '_blank'
-              },
-            },
-            {
-              title: '',
-              description: '',
-              link: {
-                url: 'https://drupaliz.me',
-                target: '_blank'
-              },
-            },
-            {
-              title: '',
-              description: '',
-              link: {
-                url: 'https://drupaliz.me',
-                target: '_blank'
-              },
-            },
-            {
-              title: '',
-              description: '',
-              link: {
-                url: 'https://drupaliz.me',
-                target: '_blank'
-              },
-            },
-          ]}></List>
-          */}
+          { (this.state.diamont ?  <><h3 className="dc sub-title" >DIAMANTE</h3><List type={"items"} numCols={(this.state.diamont.length <= 3 ? this.state.diamont.length : 3)} data={this.state.diamont}></List></> : <></>) }
+          { (this.state.gold ?  <><h3 className="dc sub-title" >ORO</h3><List type={"items"} numCols={(this.state.gold.length <= 3 ? this.state.gold.length : 3)} data={this.state.gold}></List></> : <></>) }
+          { (this.state.silver ?  <><h3 className="dc sub-title" >PLATA</h3><List type={"items"} numCols={(this.state.silver.length <= 3 ? this.state.silver.length : 3)} data={this.state.silver}></List></> : <></>) }
         </div>
       </div>
     );

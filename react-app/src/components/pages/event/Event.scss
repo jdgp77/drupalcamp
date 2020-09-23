@@ -1,0 +1,52 @@
+.section-content.one-column > div > .primary-column:nth-child(even) {
+  background: #f6f9fd;
+}
+
+.block.timer {
+  text-align: center;
+  .simply-section {
+    background-color: #FAFAFA;
+    width: 80px;
+    height: 80px;
+    color: #555;
+    display: inline-block;
+    border-radius: 10px;
+    margin: 10px;
+    .simply-amount {
+      text-align: center;
+      display: block;
+      font-size: 50px;
+    }
+    .simply-word {
+      text-align: center;
+      display: block;
+      margin-top: 5px;
+    }
+  }
+}
+
+.page-event {
+  .section.banner {
+    height: auto;
+    background-color: #d8e4e4;
+    .content {
+      height: auto;
+      position: relative;
+      padding-top: 55px;
+      padding-bottom: 100px;
+      > div.block.timer {
+        margin-bottom: 25px;
+      }
+    }
+  }
+    h1 {
+      margin-top: 180px;
+    }
+    h2 {
+      font-size: 20px;
+      text-align: center;
+    }
+    .section.banner .content > div {
+      margin-top: 20px;
+    }
+}

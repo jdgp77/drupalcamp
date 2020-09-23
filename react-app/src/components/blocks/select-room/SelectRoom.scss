@@ -1,0 +1,141 @@
+$opacity: 0.2;
+.block.select-room {
+  width: 100%;
+  max-width: 1000px !important;
+  margin-top: 90px !important;
+  margin-bottom: 0px !important;
+  &:hover .dc-container img  {
+    opacity: 1;
+  }
+  h3 {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bold;
+  }
+  .dc-container {
+    position: relative;
+    img {
+      margin-top: 0;
+      display: block;
+      opacity: $opacity;
+      @media (max-width: 800px) {
+        opacity: 1;
+      }
+    }
+    .amhere {
+      position: absolute;
+      width: 50%;
+    }
+    .room1, .room2 {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4);
+      left: 0;
+      top: 0;
+      color: transparent;
+      @media (max-width: 800px) {
+        background-color: transparent;
+      }
+      .amhere {
+        display: none;
+        position: absolute;
+        color: #333;
+        width: 100%;
+        text-align: center;
+        top: -65px;
+        span {
+          box-shadow: 0 1px 3px #3a3737;
+          display: inline-block;
+          padding: 10px 15px;
+          color: white;
+          border-radius: 17px;
+          font-size: 15px;
+          background-color: rgb(255, 50, 50);
+          @media (max-width: 800px) {
+            font-size: 9px;
+          }
+          strong {
+            font-size: 1.1em;
+          }
+          &:after {
+            $ancho: 15px;
+            content: '';
+            position: absolute;
+            bottom: -($ancho * 2);
+            left: 50%;
+            margin-left: -($ancho);
+            display: block;
+            border: $ancho solid;
+            border-radius: 0;
+            border-color: red transparent transparent transparent;
+          }
+        }
+      }
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.0);
+      }
+      &.roomhere {
+        background-color: rgba(0, 0, 0, 0.4);
+        @media (max-width: 800px) {
+          background-color: transparent;
+        }
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.0);
+          &:after {
+            border-top-color: #EEE;
+          }
+        }
+        &:after {
+          $ancho: 11px;
+          content: '';
+          position: absolute;
+          bottom: -($ancho * 2);
+          left: 50%;
+          margin-left: -($ancho);
+          display: block;
+          border: $ancho solid;
+          border-radius: 0;
+          border-color: rgba(150,150,150,0.55) transparent transparent transparent;
+          z-index: 1;
+        }
+        .amhere {
+          display: block;
+        }
+      }
+    }
+    .room2 {
+      left: 50%;
+    }
+    $altoAnchoSing: 35px;
+    $achoAnchoSing: 170px;
+    .sing {
+      background-color: #333;
+      color: white;
+      height: $altoAnchoSing;
+      width: $achoAnchoSing;
+      border-radius: 10px;
+      box-shadow: 0 0 2px #333;
+      text-align: center;
+      position: absolute;
+      margin-top: -$altoAnchoSing/2;
+      margin-left: -$achoAnchoSing/2;
+      left: 50%;
+      top: -25px;
+      padding-top: 5px;
+      font-weight: bold;
+      font-size: 15px;
+      @media (max-width: 800px) {
+        $altoAnchoSing: 30px;
+        $achoAnchoSing: 70px;
+        font-size: 9px;
+        top: -17px;
+        padding-top: 2px;
+        height: $altoAnchoSing;
+        width: $achoAnchoSing;
+        margin-top: -$altoAnchoSing/2;
+        margin-left: -$achoAnchoSing/2;
+      }
+    }
+  }
+}

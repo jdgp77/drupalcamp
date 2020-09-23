@@ -20,10 +20,11 @@ class Home extends Component {
 
   render () {
     // Falta: 'Sponsor', 'FeaturedSpeaker', 'Alliances',
+    //['WantParticipate', 'VoluntaryList', 'Sponsor', 'FormContact',
     return (
       <div>
         <Banner type={"Home"} uuid={"ee093510-da58-4fe4-8b25-83c72444806d"} ></Banner>
-        <Content type={"one-column"} arBlocks={['WantParticipate', 'VoluntaryList', 'Sponsor', 'FormContact',]}></Content>
+        <Content type={"one-column"} arBlocks={['Countdown', 'Sponsor', 'VoluntaryList', 'FormContact',]}></Content>
       </div>
     );
   }

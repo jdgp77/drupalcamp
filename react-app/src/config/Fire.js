@@ -9,10 +9,9 @@ const config = {
   authDomain: "drupalcampcolombia.firebaseapp.com",
   databaseURL: "https://drupalcampcolombia.firebaseio.com",
   projectId: "drupalcampcolombia",
-  storageBucket: "",
+  storageBucket: "drupalcampcolombia.appspot.com",
   messagingSenderId: "869162878423",
   appId: "1:869162878423:web:b099f7840616e739"
 };
-const fire = firebase.initializeApp(config);
-export const providerGoogle = new firebase.auth.GoogleAuthProvider();
-export default fire;
+const Fire = firebase.initializeApp(config);
+export default Fire;

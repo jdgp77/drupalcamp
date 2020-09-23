@@ -11,6 +11,7 @@ import TutorialList from '../../blocks/tutorial-list/TutorialList';
 import Alliances from '../../blocks/alliances/Alliances';
 import Sponsor from '../../blocks/sponsor/Sponsor';
 import FeaturedSpeaker from '../../blocks/featured-speaker/FeaturedSpeaker';
+import Countdown from '../../blocks/countdown/Countdown';
 
 class Content extends Component {
 
@@ -87,8 +88,12 @@ class Content extends Component {
 				return <Alliances data={data} info={info} ></Alliances>;
 			case 'Sponsor':
 				return <Sponsor data={data} info={info} ></Sponsor>;
+				break;
 			case 'FeaturedSpeaker':
 				return <FeaturedSpeaker data={data} info={info} ></FeaturedSpeaker>;
+				break;
+			case 'Countdown':
+				return <Countdown data={data} info={info} ></Countdown>;
 				break;
 		}
 	}

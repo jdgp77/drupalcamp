@@ -106,6 +106,26 @@
               display: none;
             }
           }
+          &.principal {
+            background-color: #3cc;
+            border-radius: 20px;
+            max-width: 140px;
+            margin-left: 20px;
+            margin-right: 20px;
+            color: white;
+            &:hover {
+              background-color: #5dd;
+            }
+            &:after {
+              display: none;
+            }
+            &:before {
+              display: none;
+            }
+          }
+          &.default-hide {
+            display: none;
+          }
         }
 
         &:hover{

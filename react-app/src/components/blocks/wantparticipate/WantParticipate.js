@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './WantParticipate.scss'
 import ImageWantParticipate from '../../../images/Participate/WantParticipate.png';
-import List from '../../structure/lists/list/List';
 import { Link } from 'react-router-dom';
 
 class WantParticipate extends Component {

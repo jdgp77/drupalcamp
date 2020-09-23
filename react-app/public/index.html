@@ -38,6 +38,53 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
     <title>DrupalCamp Virtual Colombia 2020</title>
 
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCFDpNeAiu8_fsvvYQr5iOd83K7IhKRuO4",
+        authDomain: "drupalcampcolombia.firebaseapp.com",
+        databaseURL: "https://drupalcampcolombia.firebaseio.com",
+        projectId: "drupalcampcolombia",
+        storageBucket: "drupalcampcolombia.appspot.com",
+        messagingSenderId: "869162878423",
+        appId: "1:869162878423:web:b099f7840616e739"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      fireDatabase = firebase.database();
+      
+
+      var _starCountRef = fireDatabase.ref('live/rooms/showSelection');
+      _starCountRef.on('value', function(snapshot) {
+        if (window.localStorage) {
+          window.localStorage.setItem('showSelection', snapshot.val());
+        }
+      });
+      var _starCountRef = fireDatabase.ref('live/youtube/salon1');
+      _starCountRef.on('value', function(snapshot) {
+        if (window.localStorage) {
+          window.localStorage.setItem('youtube_salon1', snapshot.val());
+        }
+      });
+      var _starCountRef = fireDatabase.ref('live/youtube/salon2');
+      _starCountRef.on('value', function(snapshot) {
+        if (window.localStorage) {
+          window.localStorage.setItem('youtube_salon2', snapshot.val());
+        }
+      });
+      var _starCountRef = fireDatabase.ref('live/youtube/talleresId');
+      _starCountRef.on('value', function(snapshot) {
+        if (window.localStorage) {
+          window.localStorage.setItem('youtube_talleresId', snapshot.val());
+        }
+      });
+
+    </script>
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147970160-1"></script>
     <script>
@@ -47,6 +94,10 @@
 
       gtag('config', 'UA-147970160-1');
     </script>
+    
+    <link rel="stylesheet" href="css/simplyCountdown.theme.default.css"/>
+    <script src="dist/simplyCountdown.min.js"></script>
+
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->

@@ -26,6 +26,10 @@ import EnviarPresentacion from './components/pages/EnviarPresentacion/EnviarPres
 import CodigoConducta from './components/pages/CodigoConducta/CodigoConducta';
 import Agenda from './components/pages/agenda/Agenda';
 import Keynote from './components/pages/keynote/Keynote';
+import LiveDay1Workshops from './components/pages/live/LiveDay1Workshops';
+import LiveDay2Conferences from './components/pages/live/LiveDay2Conferences';
+import LiveDay2ConferencesRoom2 from './components/pages/live/LiveDay2ConferencesRoom2';
+import Event from './components/pages/event/Event';
 
 const trackingId = "UA-1234567890-1"; // Replace with your Google Analytics tracking ID
 ReactGA.initialize(trackingId);
@@ -63,6 +67,10 @@ class App extends Component {
           <div>
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/evento" component={Event} />
+              <Route exact path="/live-dia1" component={LiveDay1Workshops} />
+              <Route exact path="/live-dia2" component={LiveDay2Conferences} />
+              <Route exact path="/live-dia2-salon2" component={LiveDay2ConferencesRoom2} />
               <Route exact path="/voluntario" component={Voluntario} />
               <Route exact path="/cursos" component={Courses} />
               <Route exact path="/cursos/:curso" component={Course} />

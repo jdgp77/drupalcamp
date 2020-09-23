@@ -4,7 +4,7 @@ import Banner from '../../sections/banner/Banner';
 import Content from '../../sections/content/Content';
 import './Login.scss';
 import PropTypes from 'prop-types';
-import fire, { providerGoogle } from '../../../config/Fire';
+import Fire from '../../../config/Fire';
 import { setLogin } from '../../../actions';
 import TextField from '@material-ui/core/TextField';
 import FormControl from '@material-ui/core/FormControl';
@@ -40,7 +40,8 @@ class Login extends Component {
 
   loginGoogle() {
     this.props.setLogin(true);
-    fire.auth().signInWithPopup(providerGoogle)
+    const providerGoogle = new Fire.auth.GoogleAuthProvider();
+    Fire.auth().signInWithPopup(providerGoogle)
       .then(result => {
         console.log(result);
       })
@@ -49,7 +50,7 @@ class Login extends Component {
   createUser() {
     /*
     debugger;
-    fire.auth().signInWithEmailAndPassword(this.state.user_or_email, this.state.password).catch(function(error) {
+    Fire.auth().signInWithEmailAndPassword(this.state.user_or_email, this.state.password).catch(function(error) {
       debugger;
       // Handle Errors here.
       var errorCode = error.code;
@@ -57,7 +58,7 @@ class Login extends Component {
       // ...
     });
 
-    fire.auth().onAuthStateChanged(function(user) {
+    Fire.auth().onAuthStateChanged(function(user) {
       debugger;
       if (user) {
         // User is signed in.
