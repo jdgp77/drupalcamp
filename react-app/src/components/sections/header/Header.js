@@ -99,6 +99,14 @@ class Header extends Component {
     });
   }
   
+  closeHamburgerMenu = () => {
+    var elem = document.querySelector(".sidenav");
+    var instance = window.M.Sidenav.getInstance(elem);
+    instance.close();
+    console.log('Cerrar Menu');
+  }
+  
+  
   getLinks = (menu) => {
     return menu.map((item, index) => {
       let myClassName = "";
@@ -116,8 +124,8 @@ class Header extends Component {
         );
       } else {
         return (
-          <li key={index} >
-            <Link to={item.relative}>{item.title}</Link>
+          <li key={index} onClick={this.closeHamburgerMenu}>
+            <Link to={item.relative} >{item.title}</Link>
             { item.below ? this.getLinksUl(item.below) : ''}
           </li>
         );
