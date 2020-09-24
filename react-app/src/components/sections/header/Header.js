@@ -170,13 +170,13 @@ class Header extends Component {
       <header className="section header">
         <nav>
           <div className="nav-wrapper">
-            <a href="/" className="brand-logo">
+            <Link to={'/'} className="brand-logo">
               <img
                 src={DrupalCamp}
                 alt="Logo DrupalCamp Colombia Medellin 2020"
                 height="150"
               />
-            </a>
+            </Link>
             <a href="#" data-target="mobile-demo" className="sidenav-trigger">
               <i className="material-icons">menu</i>
             </a>
