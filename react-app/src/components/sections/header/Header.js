@@ -24,14 +24,14 @@ class Header extends Component {
           ],
         },{
           title: 'Conferencias',
-          relative: '/live-dia2',
+          relative: '/live',
           key: 'abcd-conferences-room1',
           on: [
             'showConferences'
           ],
         },{
           title: 'Conferencias Salón 2',
-          relative: '/live-dia2-salon2',
+          relative: '/live-room2',
           key: 'abcd-conferences-room2',
           on: [
             'showConferences',

@@ -29,4 +29,17 @@
         padding-top: 0px;
       }
     }
+  .section.banner .content {
+    padding-bottom: 60px;
+    .block.streaming {
+      margin-bottom: 10px;
+    }
+  }
+  .block.sponsor {
+    margin-top: 100px;
+    > div {
+        display: block;
+        margin: 0 auto;
+    }
+  }
 }

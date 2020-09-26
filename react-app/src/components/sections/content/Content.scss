@@ -131,3 +131,15 @@
     font-weight: bold;
   }
 }
+p.imagecompleteagenda {
+  margin-left: -60px;
+  margin-right: -60px;
+  @media (max-width: 800px) {
+    margin-left: -40px;
+    margin-right: -40px;
+  }
+  img {
+    max-width: 800px;
+    width: 100%;
+  }
+}

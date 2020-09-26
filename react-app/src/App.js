@@ -69,8 +69,8 @@ class App extends Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/evento" component={Event} />
               <Route exact path="/live-dia1" component={LiveDay1Workshops} />
-              <Route exact path="/live-dia2" component={LiveDay2Conferences} />
-              <Route exact path="/live-dia2-salon2" component={LiveDay2ConferencesRoom2} />
+              <Route exact path="/live" component={LiveDay2Conferences} />
+              <Route exact path="/live-room2" component={LiveDay2ConferencesRoom2} />
               <Route exact path="/voluntario" component={Voluntario} />
               <Route exact path="/cursos" component={Courses} />
               <Route exact path="/cursos/:curso" component={Course} />

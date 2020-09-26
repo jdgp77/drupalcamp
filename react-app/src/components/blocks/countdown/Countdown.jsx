@@ -26,7 +26,7 @@ const Countdown = function() {
         // in case of inline set to false
         enableUtc: true,
         onEnd: function () {
-          window.location.href = "/live-dia2";
+          window.location.href = "/live";
         },
         refresh: 1000, //default refresh every 1s
         sectionClass: 'simply-section', //section css class

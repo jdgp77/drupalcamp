@@ -29,8 +29,8 @@ class SelectRoom extends Component {
       <div className="block select-room" >
         <div className="dc-container" >
           <img src={'/Evento/Img' + this.state.numImage + '.png'} />
-          <Link className={'room1 ' + (this.props.room == '1' ? 'roomhere' : '') } to={'/live-dia2'}><div className="amhere" ><span><strong>Usted esta aquí</strong></span></div></Link>
-          <Link className={'room2 ' + (this.props.room == '2' ? 'roomhere' : '') } to={'/live-dia2-salon2'}><div className="amhere" ><span><strong>Usted esta aquí</strong></span></div></Link>
+          <Link className={'room1 ' + (this.props.room == '1' ? 'roomhere' : '') } to={'/live'}><div className="amhere" ><span><strong>Usted esta aquí</strong></span></div></Link>
+          <Link className={'room2 ' + (this.props.room == '2' ? 'roomhere' : '') } to={'/live-room2'}><div className="amhere" ><span><strong>Usted esta aquí</strong></span></div></Link>
           <div className="sing" >Selecciona el salón</div>
         </div>
       </div>

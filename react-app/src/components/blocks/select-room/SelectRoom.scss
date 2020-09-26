@@ -1,4 +1,4 @@
-$opacity: 0.2;
+$opacity: 1;
 .block.select-room {
   width: 100%;
   max-width: 1000px !important;
@@ -30,7 +30,7 @@ $opacity: 0.2;
       position: absolute;
       width: 50%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
+      background-color: rgba(232, 242, 243, 0.7);
       left: 0;
       top: 0;
       color: transparent;
@@ -76,7 +76,7 @@ $opacity: 0.2;
         background-color: rgba(0, 0, 0, 0.0);
       }
       &.roomhere {
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(232, 242, 243, 0.7);
         @media (max-width: 800px) {
           background-color: transparent;
         }

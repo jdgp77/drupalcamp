@@ -7,6 +7,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import Countdown from '../../blocks/countdown/Countdown';
 import Streaming from '../../blocks/streaming/Streaming';
 import SelectRoom from '../../blocks/select-room/SelectRoom';
+import Sponsor from '../../blocks/sponsor/Sponsor';
 
 class LiveDay2Conferences extends Component {
 
@@ -75,6 +76,7 @@ class LiveDay2Conferences extends Component {
             }
           </div>
         </div>
+        <Sponsor></Sponsor>
       </div>
     );
   }
